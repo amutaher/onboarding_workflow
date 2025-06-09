@@ -1,0 +1,65 @@
+{
+ "charts": [
+  {
+   "chart_name": "Onboarding Tasks",
+   "label": "Pending Onboarding Tasks"
+  }
+ ],
+ "content": "[{\"id\":\"0hvin-znzT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Onboarding Workflow</span>\",\"col\":12}},{\"id\":\"Auks9c7VUy\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Pending Onboarding Tasks\",\"col\":12}},{\"id\":\"LrQj9bb2ED\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"luqoObF3i7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":3}},{\"id\":\"65K8lNU23b\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker Template\",\"col\":3}},{\"id\":\"6BLP9mE_Ht\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Onboarding Tracker\",\"col\":3}},{\"id\":\"KF7Y6fHVDk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"5Pl9pjw-6p\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pending Employee Onboarding\",\"col\":4}}]",
+ "creation": "2025-06-03 20:01:20.449706",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "milestone",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Onboarding Tracker",
+ "links": [],
+ "modified": "2025-06-10 01:18:55.446994",
+ "modified_by": "Administrator",
+ "module": "Onboarding Workflow",
+ "name": "Onboarding Tracker",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "HR",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Employee Onboarding Tracker",
+   "label": "Pending Employee Onboarding",
+   "quick_list_filter": "[[\"Employee Onboarding Tracker\",\"boarding_status\",\"!=\",\"Completed\",false],[\"Employee Onboarding Tracker\",\"docstatus\",\"!=\",\"2\",false]]"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 12.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tracker Template",
+   "link_to": "Onboarding Tracker Template",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Onboarding Tracker",
+   "link_to": "Employee Onboarding Tracker",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Onboarding Tracker"
+}

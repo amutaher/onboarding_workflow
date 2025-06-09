@@ -1,0 +1,221 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HR-EONBT-.YYYY.-.#####",
+ "creation": "2025-06-02 00:00:32.657046",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "designation",
+  "column_break_7",
+  "onboarding_tracker_template",
+  "column_break_kfcz",
+  "company",
+  "boarding_status",
+  "project",
+  "details_section",
+  "department",
+  "employee_grade",
+  "column_break_13",
+  "date_of_joining",
+  "boarding_begins_on",
+  "table_for_activity",
+  "activities",
+  "notify_users_by_email",
+  "amended_from",
+  "assets_tab",
+  "required_assets"
+ ],
+ "fields": [
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "link_filters": "[[\"Employee\",\"onboarding_tracker\",\"=\",null]]",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Joining",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "boarding_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nIn Process\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "notify_users_by_email",
+   "fieldtype": "Check",
+   "label": "Notify users by email"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "designation.onboarding_tracker_template",
+   "fieldname": "onboarding_tracker_template",
+   "fieldtype": "Link",
+   "label": "Tracker Template",
+   "options": "Onboarding Tracker Template"
+  },
+  {
+   "fetch_from": "onboarding_tracker_template.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fetch_from": "employee.grade",
+   "fieldname": "employee_grade",
+   "fieldtype": "Link",
+   "label": "Employee Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "table_for_activity",
+   "fieldtype": "Section Break",
+   "label": "Onboarding Activities"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "activities",
+   "fieldtype": "Table",
+   "label": "Activities",
+   "options": "Employee Boarding Activity"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Onboarding Tracker",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "boarding_begins_on",
+   "fieldtype": "Date",
+   "label": "Onboarding Begins On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assets_tab",
+   "fieldtype": "Tab Break",
+   "label": "Assets"
+  },
+  {
+   "fieldname": "required_assets",
+   "fieldtype": "Table",
+   "label": "Required Assets",
+   "options": "Required Assets"
+  },
+  {
+   "fieldname": "column_break_kfcz",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-10 01:19:45.984548",
+ "modified_by": "Administrator",
+ "module": "Onboarding Workflow",
+ "name": "Employee Onboarding Tracker",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee_name",
+ "track_changes": 1
+}

@@ -1,0 +1,38 @@
+{
+ "based_on": "",
+ "chart_name": "Onboarding Tasks",
+ "chart_type": "Group By",
+ "creation": "2025-06-10 01:02:40.487663",
+ "currency": "",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Employee Boarding Activity",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Employee Boarding Activity\",\"activity_status\",\"!=\",\"Completed\",false]]",
+ "group_by_based_on": "activity_status",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "last_synced_on": "2025-06-10 01:04:42.441957",
+ "modified": "2025-06-10 01:04:52.754659",
+ "modified_by": "Administrator",
+ "module": "Onboarding Workflow",
+ "name": "Onboarding Tasks",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "parent_document_type": "Employee Onboarding Tracker",
+ "roles": [
+  {
+   "role": "HR Manager"
+  }
+ ],
+ "source": "",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Donut",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "y_axis": []
+}

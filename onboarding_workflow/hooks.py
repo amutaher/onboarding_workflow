@@ -9,6 +9,7 @@ app_license = "mit"
 # ------------------
 
 # required_apps = []
+required_apps = ["erpnext", "hrms"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -43,6 +44,9 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
+doctype_js = {
+	"Employee": "public/js/employee.js",
+}
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -145,6 +149,19 @@ app_license = "mit"
 # 	}
 # }
 
+doc_events = {
+	"Project": {"validate": "onboarding_workflow.api.utils.custom_update_employee_boarding_status"},
+	"Task": {"on_update": "onboarding_workflow.api.utils.custom_update_task"},
+    "Asset Movement": {
+        "on_cancel": "onboarding_workflow.api.utils.clear_asset_movement_reference",
+        "on_trash": "onboarding_workflow.api.utils.clear_asset_movement_reference"
+    },
+    "Material Request": {
+        "on_cancel": "onboarding_workflow.api.utils.clear_material_request_reference",
+        "on_trash": "onboarding_workflow.api.utils.clear_material_request_reference"
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 
@@ -234,6 +251,45 @@ app_license = "mit"
 # auth_hooks = [
 # 	"onboarding_workflow.auth.validate"
 # ]
+
+fixtures = [
+    {
+        "doctype": "Custom Field",
+         "filters": [
+            ["module", "=", "Onboarding Workflow"]
+        ]
+    },
+    {
+        "doctype": "Property Setter",
+         "filters": [
+            ["module", "=", "Onboarding Workflow"]
+        ]
+    },
+    {
+        "doctype": "Role",
+        "filters": {
+            "name": ["in", ["Admin"]]
+        }
+    },
+    {
+        "doctype": "Workflow State",
+        "filters": {
+            "name": ["in", ["Draft","Assigned","Completed","Cancelled"]]
+        }
+    },
+    {
+        "doctype": "Workflow Action Master",
+        "filters": {
+            "name": ["in", ["Submit","Complete","Cancel"]]
+        }
+    },
+    {
+        "doctype": "Workflow",
+        "filters": {
+            "name": ["in", ["Employee Onboarding Workflow"]]
+        }
+    }
+]
 
 # Automatically update python controller files with type annotations for this app.
 # export_python_type_annotations = True
