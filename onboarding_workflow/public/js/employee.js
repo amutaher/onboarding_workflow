@@ -1,6 +1,6 @@
 frappe.ui.form.on('Employee', {
     refresh: function(frm) {
-        if (!frm.is_new() && !frm.doc.onboarding_tracker && frm.doc.ststus === "Active") {
+        if (!frm.is_new() && !frm.doc.onboarding_tracker && frm.doc.status === "Active") {
             frm.add_custom_button(__('Create Onboarding'), function () {
                 create_onboarding_documents(frm);
             });

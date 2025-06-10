@@ -25,9 +25,9 @@
   "table_for_activity",
   "activities",
   "notify_users_by_email",
-  "amended_from",
-  "assets_tab",
-  "required_assets"
+  "assets_section",
+  "required_assets",
+  "amended_from"
  ],
  "fields": [
   {
@@ -136,6 +136,7 @@
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Amended From",
    "no_copy": 1,
    "options": "Employee Onboarding Tracker",
@@ -158,11 +159,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "assets_tab",
-   "fieldtype": "Tab Break",
-   "label": "Assets"
-  },
-  {
    "fieldname": "required_assets",
    "fieldtype": "Table",
    "label": "Required Assets",
@@ -171,13 +167,18 @@
   {
    "fieldname": "column_break_kfcz",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assets_section",
+   "fieldtype": "Section Break",
+   "label": "Assets"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-10 01:19:45.984548",
+ "modified": "2025-06-10 18:50:59.568293",
  "modified_by": "Administrator",
  "module": "Onboarding Workflow",
  "name": "Employee Onboarding Tracker",
